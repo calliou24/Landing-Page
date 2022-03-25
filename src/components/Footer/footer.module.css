@@ -1,0 +1,195 @@
+.footerCont {
+	margin: 150px 0 0 0;
+}
+
+.card {
+	background-color: var(--bright-red);
+	padding: 50px 0;
+	width: 100%;
+	display: flex;
+}
+
+.cardContent {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	margin: auto;
+}
+
+.cardTitle {
+	font-size: 2rem;
+	font-weight: 500;
+	color: var(--very-light-gray);
+}
+
+.buttonGetStarted {
+	background-color: var(--very-light-gray);
+	color: var(--bright-red);
+	font-size: .8rem;
+	width: 130px;
+	height: 45px;
+	border-radius: 30px;
+	border: none;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.footer {
+	background-color: var(--very-dark-blue);
+	padding: 40px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.frsCont {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 50px;
+	width: 33%;
+}
+
+.mediaCont {
+	width: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.iconCont {
+	cursor: pointer;
+}
+
+.iconCont:hover > svg > path {
+	transition: .1s;
+	fill: var(--bright-red);
+}
+
+.scdCont {
+	display: flex;
+	justify-content: center;
+	column-gap: 100px;
+	width: 33%;
+}
+
+.list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.item {
+	color: var(--very-light-gray);
+	font-weight: 400;
+	font-size: .8rem;
+	cursor: pointer;
+}
+
+.item:hover {
+	color: var(--bright-red);
+}
+
+.thrCont {
+	width: 33%;
+}
+
+.formCont {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	position: relative;
+}
+
+.form {
+	display: flex;
+	column-gap: 10px;
+}
+
+.input {
+	font-size: .9rem;
+	padding: 10px;
+	width: 200px;
+	border: none;
+	outline: none;
+	border-radius: 30px;
+}
+
+.buttonSubmit {
+	border: none;
+	border-radius: 30px;
+	outline: none;
+	padding: 10px 20px;
+	font-weight: 400;
+	color: var(--very-light-gray);
+	background-color: var(--bright-red);
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+.buttonSubmit::after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: #fff4;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	transition: .1s;
+}
+.buttonSubmit:hover::after {
+	opacity: 1;
+}
+
+.validationText {
+	margin-left: 10px;
+}
+
+.copyright {
+	position: absolute;
+	color: #aaa;
+	font-size: .9rem;
+	font-weight: 400;
+	width: max-content;
+	bottom: -20px;
+}
+
+#validEmail {
+	color: #9f9f;
+}
+
+#invalidEmail {
+	color: #ff0000;
+}
+
+@media (max-width: 50em) {
+	.cardContent {
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		row-gap: 30px;
+	}
+	.footer {
+		flex-direction: column-reverse;
+		row-gap: 80px;
+	}
+	.frsCont,
+	.scdCont,
+	.thrCont {
+		width: 90%;
+	}
+	.formCont {
+		justify-content: center;
+		align-items: center;
+	}
+	.validationText {
+		margin: 0;
+	}
+	.form {
+		margin: auto;
+	}
+}

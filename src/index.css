@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "BeVietnam";
+  src: url(./assets/fonts/BeVietnamPro-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "BeVietnam";
+  src: url(./assets/fonts/BeVietnamPro-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "BeVietnam";
+  src: url(./assets/fonts/BeVietnamPro-Bold.ttf);
+  font-weight: 700;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--very-dark-blue);
+  border-radius: 30px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  font-family: "BeVietnam";
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* primary */
+  --bright-red: hsl(12, 88%, 59%);
+  --dark-blue: hsl(228, 39%, 23%);
+
+  /* neutral */
+  --dark-grayish-blue: hsl(227, 12%, 61%);
+  --very-dark-blue: hsl(233, 12%, 13%);
+  --very-pale-red: hsl(13, 100%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  overflow-x: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.first-cont {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 50em) {
+  .first-cont {
+    width: 100%;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,16 @@
+.button {
+	background-color: var(--bright-red);
+	color: var(--very-light-gray);
+	width: 150px;
+	height: 50px;
+	border-radius: 30px;
+	border: none;
+	cursor: pointer;
+	font-weight: 700;
+	transition: all 0.2s;
+	box-shadow: 0 10px 15px 0 var(--very-pale-red);
+}
+
+.button:hover {
+	opacity: 0.8;
+}
