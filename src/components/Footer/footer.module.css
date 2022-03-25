@@ -7,6 +7,10 @@
 	padding: 50px 0;
 	width: 100%;
 	display: flex;
+	background-image: url(../../assets/images/bg-simplify-section-desktop.svg);
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position:center ;
 }
 
 .cardContent {
@@ -167,6 +171,11 @@
 }
 
 @media (max-width: 50em) {
+	.card{
+		background-image:url(../../assets/images/bg-simplify-section-mobile.svg) ;
+		background-size: 100px;
+		background-position: left;
+	}
 	.cardContent {
 		justify-content: center;
 		flex-direction: column;

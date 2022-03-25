@@ -36,7 +36,7 @@ function Form() {
 
 	useEffect(
 		() => {
-			console.log(validEmail);
+			//console.log(validEmail);
 			const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 			if (emailRegex.test(inputValue)) return setValidEmail(true);
 			return setValidEmail(false);
@@ -71,7 +71,13 @@ function Form() {
 }
 
 function Footer() {
-	const socialMediaIcons = [ <Facebook />, <Youtube />, <Twitter />, <Pinterest />, <Instagram /> ];
+	const socialMediaIcons = [
+		{ id: '01', element: <Facebook /> },
+		{ id: '02', element: <Youtube /> },
+		{ id: '03', element: <Twitter /> },
+		{ id: '04', element: <Pinterest /> },
+		{ id: '05', element: <Instagram /> }
+	];
 
 	return (
 		<footer className={styles.footerCont}>
@@ -80,7 +86,11 @@ function Footer() {
 				<div className={styles.frsCont}>
 					<Logo />
 					<div className={styles.mediaCont}>
-						{socialMediaIcons.map((e) => <div className={styles.iconCont}>{e}</div>)}
+						{socialMediaIcons.map(({element, id}) => (
+							<div key={id} className={styles.iconCont}>
+								{element}
+							</div>
+						))}
 					</div>
 				</div>
 				<div className={styles.scdCont}>
